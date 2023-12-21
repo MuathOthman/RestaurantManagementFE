@@ -1,24 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import Register from "./pages/Register";
+import {Route, Routes, BrowserRouter} from "react-router-dom";
+import CreateRestaurant from "./pages/CreateRestaurant";
+import UserContext  from "./user-context";
+import {useState} from "react";
+import Login from "./pages/Login";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    const [user, setUser] = useState(null);
+
+    return (
+      <UserContext.Provider value={[user, setUser]}>
+          <div className="App">
+              <Routes>
+                  <Route path="/" element={<Register />} />
+                  <Route path="/create" element={<CreateRestaurant />} />
+                  <Route path="*" element={<h1>Not Found</h1>} />
+                  <Route path="/login" element={<Login />}/>
+              </Routes>
+          </div>
+      </UserContext.Provider>
   );
 }
 
