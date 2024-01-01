@@ -1,16 +1,49 @@
-import React from 'react';
-import {Card} from "@mui/material";
-import TinyLineChart from "./TinyLineChart";
+import * as React from 'react';
+import Button from '@mui/joy/Button';
+import Card from '@mui/joy/Card';
+import CardContent from '@mui/joy/CardContent';
+import CardActions from '@mui/joy/CardActions';
+import CircularProgress from '@mui/joy/CircularProgress';
+import Typography from '@mui/joy/Typography';
+import SvgIcon from '@mui/joy/SvgIcon';
 
 
 
 const Minicard = ({title, quantity, data, color}) => {
     return (
         <div>
-            <Card className="m-8 mb-0" sx={{borderBlockColor: 'black', height: '100%'}}>
-                <div className="text-gray-500 text-left m-4 -mb-3">{title}</div>
-                <h4 className="text-2xl font-semibold text-gray-700 text-left m-4 mb-0">{quantity}</h4>
-                <TinyLineChart data={data} color={color}/>
+            <Card className="ml-8 mt-8 mb-0" variant="solid" color="primary" invertedColors>
+                <CardContent orientation="horizontal">
+                    <CircularProgress size="lg" determinate value={90}>
+                        <SvgIcon>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                strokeWidth={1.5}
+                                stroke="currentColor"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941"
+                                />
+                            </svg>
+                        </SvgIcon>
+                    </CircularProgress>
+                    <CardContent>
+                        <Typography level="body-md">{title}</Typography>
+                        <Typography level="h2">{quantity}</Typography>
+                    </CardContent>
+                </CardContent>
+                <CardActions>
+                    <Button variant="soft" size="sm">
+                        Add to Watchlist
+                    </Button>
+                    <Button variant="solid" size="sm">
+                        See breakdown
+                    </Button>
+                </CardActions>
             </Card>
         </div>
     );

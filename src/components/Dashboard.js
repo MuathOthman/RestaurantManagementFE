@@ -15,6 +15,8 @@ const Dashboard = () => {
                     <Minicard title="REVENUE" quantity="300€" data={data1} color="'#db504a"/>
                     <Minicard title="CUSTOMERS" quantity="894" data={data2} color="#43aa8b"/>
                     <Minicard title="REVIEW" quantity="4.4" data={data3} color="#e3b505"/>
+                    <Minicard title="REVIEW" quantity="4.4" data={data3} color="#e3b505"/>
+
                 </div>
                 <div className="mt-14">
                     <Card className="m-8 mb-0" sx={{borderBlockColor: 'black', height: '50vh'}}>
