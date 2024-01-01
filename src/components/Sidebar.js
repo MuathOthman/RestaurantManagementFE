@@ -2,6 +2,7 @@ import React from 'react';
 import { BiLogoFlask } from "react-icons/bi";
 import { GoHomeFill, GoPersonFill, GoTelescopeFill } from "react-icons/go";
 import { IoDocuments, IoHelpCircleSharp, IoCog, IoLogOut } from "react-icons/io5";
+import {NavLink} from "react-router-dom";
 
 
 
@@ -13,22 +14,34 @@ function Sidebar() {
                 <a href="#" className="hs-accordion-title text-white text-lg font-semibold mb-20">LOGO</a>
                 <ul className="space-y-7 items-center justify-items-center ml-2">
                     <li>
-                        <GoHomeFill className="text-white text-3xl hover:text-[#084c61]"/>
+                        <NavLink to="/dashboard">
+                            <GoHomeFill className="text-white text-3xl hover:text-[#084c61]"/>
+                        </NavLink>
                     </li>
                     <li>
-                        <GoTelescopeFill className="text-white text-3xl hover:text-[#084c61]"/>
+                        <NavLink to={"/restaurants"}>
+                            <GoTelescopeFill className="text-white text-3xl hover:text-[#084c61]"/>
+                        </NavLink>
                     </li>
                     <li>
-                        <GoPersonFill className="text-white text-3xl hover:text-[#084c61]"/>
+                        <NavLink to={"/employees"}>
+                            <GoPersonFill className="text-white text-3xl hover:text-[#084c61]"/>
+                        </NavLink>
                     </li>
                     <li>
-                        <IoDocuments className="text-white text-3xl hover:text-[#084c61]"/>
+                        <NavLink to={"/documents"}>
+                            <IoDocuments className="text-white text-3xl hover:text-[#084c61]"/>
+                        </NavLink>
                     </li>
                     <li>
-                        <IoHelpCircleSharp className="text-white text-3xl hover:text-[#084c61]"/>
+                        <NavLink to={"/help"}>
+                            <IoHelpCircleSharp className="text-white text-3xl hover:text-[#084c61]"/>
+                        </NavLink>
                     </li>
                     <li>
-                        <IoCog className="text-white text-3xl mb-52 hover:text-[#084c61]"/>
+                        <NavLink to={"/settings"}>
+                            <IoCog className="text-white text-3xl mb-52 hover:text-[#084c61]"/>
+                        </NavLink>
                     </li>
                     <li>
                         <IoLogOut className="text-white text-3xl hover:text-[#084c61]"/>

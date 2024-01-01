@@ -1,14 +1,16 @@
 import React from 'react';
 import {Card} from "@mui/material";
-import { palette } from '@mui/system';
+import TinyLineChart from "./TinyLineChart";
 
 
 
-const Minicard = () => {
+const Minicard = ({title, quantity, data, color}) => {
     return (
         <div>
-            <Card className="w-1/4 h-2/3 m-8" sx={{ borderBlockColor: 'black', height: '100%' }}>
-                <h1 className="text-white text-2xs font-bold text-left">DATA:</h1>
+            <Card className="m-8 mb-0" sx={{borderBlockColor: 'black', height: '100%'}}>
+                <div className="text-gray-500 text-left m-4 -mb-3">{title}</div>
+                <h4 className="text-2xl font-semibold text-gray-700 text-left m-4 mb-0">{quantity}</h4>
+                <TinyLineChart data={data} color={color}/>
             </Card>
         </div>
     );
