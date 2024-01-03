@@ -1,6 +1,7 @@
 import React from 'react';
-import {Avatar, Card} from "@mui/material";
-import Minicard from "./Card";
+import Minicard from "./Minicard";
+import Card from "./Card";
+import Example from "./Card";
 
 const data1 = [3100, 1398, 2800, 6908, 3800, 8800, 5300];
 const data2 = [4100, 5398, 5800, 2908, 1800, 2800, 3300];
@@ -21,7 +22,8 @@ const Dashboard = () => {
                 <Minicard title="Managed Restaurants " content="Content for card 1 " icon="🏬️" amount="3"/>
                 <Minicard title="Activity" content="Content for card 1 " icon="📈️" amount="200k"/>
             </div>
-            <div className="mt-14">
+            <div className="flex justify-around items-stretch px-4 py-2 mt-5">
+                <Card title="This month earning" content="5500€" amount=""/>
             </div>
         </div>
     );

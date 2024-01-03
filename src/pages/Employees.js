@@ -1,6 +1,6 @@
 import React from 'react';
 import {Avatar} from "@mui/material";
-import Card from "../components/Card";
+import Card from "../components/Minicard";
 
 const Employees = () => {
     return (
