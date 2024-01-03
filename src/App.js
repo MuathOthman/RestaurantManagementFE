@@ -2,13 +2,14 @@ import './App.css';
 import Register from "./pages/Register";
 import {Route, Routes} from "react-router-dom";
 import CreateRestaurant from "./pages/CreateRestaurant";
-import UserContext  from "./user-context";
+import UserContext  from "./contexts/user-context";
 import React, {useState} from "react";
 import Login from "./pages/Login";
 import System from "./pages/System";
 import Employees from "./pages/Employees";
 import Sidebar from "./components/Sidebar";
 import Dashboard from "./components/Dashboard";
+import Restaurant from "./pages/Restaurant";
 
 function App() {
     const [user, setUser] = useState(null);
@@ -29,6 +30,7 @@ function App() {
                           <Route path="/login" element={<Login/>}/>
                           <Route path="/dashboard" element={<Dashboard/>}/>
                           <Route path="/employees" element={<Employees/>}/>
+                          <Route path="/restaurants" element={<Restaurant/>}/>
                       </Routes>
                   </div>
               </div>

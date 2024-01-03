@@ -1,8 +1,8 @@
 import React from 'react';
 import {useContext} from "react";
-import UserContext from "../user-context";
+import UserContext from "../contexts/user-context";
 import nameImage from "./Styles/restaruntname(scaled).jpg";
-import restaurantContext from "../restaurantName-context";
+import restaurantContext from "../contexts/restaurantName-context";
 import NewRestaurantP1 from "../components/Form/newRestaurantP1";
 
 const CreateRestaurant = () => {

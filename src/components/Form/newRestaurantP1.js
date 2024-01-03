@@ -1,6 +1,6 @@
 import React, {createContext} from 'react';
-import restaurantContext from "../../restaurantName-context";
-import userContext from "../../user-context";
+import restaurantContext from "../../contexts/restaurantName-context";
+import userContext from "../../contexts/user-context";
 
 
 function NewRestaurantP1() {

@@ -98,7 +98,7 @@ const chartConfig = {
 
 export default function Example() {
     return (
-        <Card>
+        <Card className="bg-white rounded-lg shadow-md mx-5 hover:shadow-lg ">
             <CardBody className="px-2 pb-0">
                 <Chart {...chartConfig} />
             </CardBody>
