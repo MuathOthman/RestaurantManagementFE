@@ -6,24 +6,23 @@ const data1 = [3100, 1398, 2800, 6908, 3800, 8800, 5300];
 const data2 = [4100, 5398, 5800, 2908, 1800, 2800, 3300];
 const data3 = [8100, 7398, 6800, 8908, 5800, 2800, 4300];
 
+
+
 const Dashboard = () => {
     return (
         <div className="box-content h-dvh w-full bg-white rounded-l-[3rem]">
             <br></br>
-                <h1 className="text-[#DB504A] text-3xl font-bold text-left m-8 mb-0">Welcome Muath 👋🏻</h1>
-                <div className="flex-row flex">
-                    <Minicard title="REVENUE" quantity="300€" data={data1} color="'#db504a"/>
-                    <Minicard title="CUSTOMERS" quantity="894" data={data2} color="#43aa8b"/>
-                    <Minicard title="REVIEW" quantity="4.4" data={data3} color="#e3b505"/>
-                    <Minicard title="REVIEW" quantity="4.4" data={data3} color="#e3b505"/>
+            <h1 className="text-[#DB504A] text-3xl font-bold text-left m-8 -mb-3">Welcome Muath 👋🏻</h1>
+            <h2 className="text-black text-2xl font-bold text-left m-8 -mb-3">Here's what's happening with your business today:</h2>
 
-                </div>
-                <div className="mt-14">
-                    <Card className="m-8 mb-0" sx={{borderBlockColor: 'black', height: '50vh'}}>
-                        <div className="text-gray-500 text-left m-4 -mb-3">REVENUE</div>
-                        <h4 className="text-2xl font-semibold text-gray-700 text-left m-4 mb-0">300€</h4>
-                    </Card>
-                </div>
+            <div className="flex justify-around items-stretch px-4 py-2 mt-5">
+                <Minicard title="Current Balance" content="Content for card 1 " icon="⚖️" amount="1500€"/>
+                <Minicard title="Monthly Expenses" content="Content for card 2" icon="💸" amount="500€"/>
+                <Minicard title="Managed Restaurants " content="Content for card 1 " icon="🏬️" amount="3"/>
+                <Minicard title="Activity" content="Content for card 1 " icon="📈️" amount="200k"/>
+            </div>
+            <div className="mt-14">
+            </div>
         </div>
     );
 };

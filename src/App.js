@@ -1,6 +1,6 @@
 import './App.css';
 import Register from "./pages/Register";
-import {Route, Routes, BrowserRouter} from "react-router-dom";
+import {Route, Routes} from "react-router-dom";
 import CreateRestaurant from "./pages/CreateRestaurant";
 import UserContext  from "./user-context";
 import React, {useState} from "react";
