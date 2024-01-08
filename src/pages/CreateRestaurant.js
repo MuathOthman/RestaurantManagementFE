@@ -1,37 +1,30 @@
 import React from 'react';
-import {useContext} from "react";
-import UserContext from "../contexts/user-context";
-import nameImage from "./Styles/restaruntname(scaled).jpg";
-import restaurantContext from "../contexts/restaurantName-context";
-import NewRestaurantP1 from "../components/Form/newRestaurantP1";
+import {Avatar} from "@mui/material";
+import Card from "../components/Minicard";
+import BasicInformation from "../forms/restaurant/BasicInformation";
+import StaffInformation from "../forms/restaurant/StaffInformation";
+import WebsiteURL from "../forms/restaurant/WebsiteURL";
 
 const CreateRestaurant = () => {
-    const [user] = useContext(UserContext);
-    const [restaurant, setRestaurant] = React.useState("");
     return (
-        <restaurantContext.Provider value={[restaurant, setRestaurant]}>
-        <div className="grid grid-cols-2 divide-x">
-            <div>
-                <img className="w-full h-full object-cover" src={nameImage} alt="registerImage"/>
-                <h1 className="text-[#615b4d] absolute text-5xl text-white top-[304px] left-1/4 -translate-x-1/2 -translate-y-1/2">{restaurant.toUpperCase()}</h1>
-            </div>
-            <div>
-                <div className="flex flex-col justify-center items-center h-screen">
-                    <div className="flex flex-col justify-center items-center">
-                        <h1 className="text-black text-center text-4xl">Welcome {user.firstName} 👋🏻</h1>
-                        <br/>
-                        <p className="text-black text-center text-2xl">Let's create your first restaurant</p>
-                        <br/>
-                        <div className="">
-                            <NewRestaurantP1/>
-                        </div>
-                    </div>
+        <div className="box-content h-dvh w-full bg-white rounded-l-[3rem]">
+            <br></br>
+            <h1 className="text-[#DB504A] text-3xl font-bold text-left m-8 mb-0">Create Restaurant</h1>
+            <div className="flex flex-row">
+                <BasicInformation/>
+                <div className="ml-20">
+                    <StaffInformation/>
+                </div>
+                <div className="ml-20">
+                    <WebsiteURL/>
+                </div>
+                <div className="ml-20">
+                    <BasicInformation/>
                 </div>
             </div>
+            <button className="bg-[#DB504A] hover:bg-[#DB504A] text-white font-bold py-2 px-4 rounded-full ml-20 mt-5">Create Restaurant</button>
         </div>
-        </restaurantContext.Provider>
     );
 };
-
 
 export default CreateRestaurant;

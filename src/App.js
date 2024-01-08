@@ -1,15 +1,16 @@
 import './App.css';
 import Register from "./pages/Register";
 import {Route, Routes} from "react-router-dom";
-import CreateRestaurant from "./pages/CreateRestaurant";
+import CreateRestaurantOld from "./pages/CreateRestaurant-old";
 import UserContext  from "./contexts/user-context";
 import React, {useState} from "react";
 import Login from "./pages/Login";
 import System from "./pages/System";
 import Employees from "./pages/Employees";
 import Sidebar from "./components/Sidebar";
-import Dashboard from "./components/Dashboard";
+import Dashboard from "./pages/Dashboard";
 import Restaurant from "./pages/Restaurant";
+import CreateRestaurant from "./pages/CreateRestaurant";
 
 function App() {
     const [user, setUser] = useState(null);
@@ -25,6 +26,7 @@ function App() {
                   <div className="flex-1 ml-20 ">
                       <Routes>
                           <Route path="/" element={<Register/>}/>
+                          <Route path="/create-old" element={<CreateRestaurantOld/>}/>
                           <Route path="/create" element={<CreateRestaurant/>}/>
                           <Route path="*" element={<h1>Not Found</h1>}/>
                           <Route path="/login" element={<Login/>}/>

@@ -1,7 +1,7 @@
 import React from 'react';
-import Minicard from "./Minicard";
-import Card from "./Card";
-import Example from "./Card";
+import Minicard from "../components/Minicard";
+import Card from "../components/Card";
+import Example from "../components/Card";
 
 const data1 = [3100, 1398, 2800, 6908, 3800, 8800, 5300];
 const data2 = [4100, 5398, 5800, 2908, 1800, 2800, 3300];

@@ -3,7 +3,7 @@
 import React from 'react';
 import Sidebar from "../components/Sidebar";
 import "./Styles/System.css";
-import Dashboard from "../components/Dashboard";
+import Dashboard from "./Dashboard";
 
 
 const System = () => {
