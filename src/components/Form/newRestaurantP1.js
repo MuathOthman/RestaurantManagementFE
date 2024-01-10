@@ -27,7 +27,7 @@ function NewRestaurantP1() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log("Restaurant Name: " + restaurantName);
+        console.log("Restaurants Name: " + restaurantName);
         console.log("Address: " + address);
         console.log("City: " + city);
         console.log("ZIP Code: " + zipCode);

@@ -1,35 +1,24 @@
-import React, {useState} from 'react';
-import {Avatar} from "@mui/material";
-import Popup from "../components/Popup";
-import PopupContext from "../contexts/popup-context";
+import React from 'react';
+import Minicard from "../components/Minicard";
+import Card from "../components/Card";
+import Example from "../components/Card";
+import ImageGrid from "../components/ImageGrid";
+
+const data1 = [3100, 1398, 2800, 6908, 3800, 8800, 5300];
+const data2 = [4100, 5398, 5800, 2908, 1800, 2800, 3300];
+const data3 = [8100, 7398, 6800, 8908, 5800, 2800, 4300];
 
 
-const Restaurant = () => {
-    const [available, setAvailable] = useState(false);
 
-    const handlePopup = () => {
-        setAvailable(true);
-        console.log("You have clicked me")
-        console.log(available)
-    };
-
-    const closePopup = () => {
-        setAvailable(false);
-    };
+const Dashboard = () => {
     return (
-        <PopupContext.Provider value={[available, setAvailable]} >
-            <div>
-                <div className="box-content h-dvh w-full bg-[#F8F9FB] rounded-l-[3rem]">
-                    <br></br>
-                    <h1 className="text-[#DB504A] text-3xl font-bold text-left m-8 -mb-3">All Restaurants</h1>
-                    <div className="flex flex-row">
-                            <Avatar className="m-8 w-1/2" sx={{width: 150, height: 150, bgcolor:'#DB504A', fontSize: '30px'}} onClick={handlePopup}>+</Avatar>
-                            <Popup closePopup={closePopup} />
-                    </div>
-                </div>
-            </div>
-        </PopupContext.Provider>
+        <div className="box-content h-dvh w-full bg-[#F8F9FB] rounded-l-[3rem]">
+            <br></br>
+            <h1 className="text-[#DB504A] text-3xl font-bold text-left m-8 -mb-3">Welcome Muath 👋🏻</h1>
+            <h2 className="text-black text-2xl font-bold text-left m-8 -mb-3">Here's what's happening with your business today:</h2>
+            <ImageGrid/>
+        </div>
     );
 };
 
-export default Restaurant;
+export default Dashboard;

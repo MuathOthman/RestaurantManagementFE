@@ -9,8 +9,11 @@ import System from "./pages/System";
 import Employees from "./pages/Employees";
 import Sidebar from "./components/Sidebar";
 import Dashboard from "./pages/Dashboard";
-import Restaurant from "./pages/Restaurant";
+import Restaurants from "./pages/Restaurants";
 import CreateRestaurant from "./pages/CreateRestaurant";
+import Restaurant from "./pages/Restaurant";
+import CreateEmployee from "./pages/CreateEmployee";
+import CustomEmployee from "./pages/CustomEmployee";
 
 function App() {
     const [user, setUser] = useState(null);
@@ -32,7 +35,10 @@ function App() {
                           <Route path="/login" element={<Login/>}/>
                           <Route path="/dashboard" element={<Dashboard/>}/>
                           <Route path="/employees" element={<Employees/>}/>
-                          <Route path="/restaurants" element={<Restaurant/>}/>
+                          <Route path="/restaurants" element={<Restaurants/>}/>
+                          <Route path="/restaurant" element={<Restaurant/>}/>
+                          <Route path="/createemployee" element={<CreateEmployee/>}/>
+                          <Route path="/employee" element={<CustomEmployee/>}/>
                       </Routes>
                   </div>
               </div>
